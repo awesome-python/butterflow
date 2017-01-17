@@ -1,19 +1,6 @@
 # Install on Windows Guide
-**Important:** BF only works on 64-bit systems.
 
-## The prebuilt version
-Download link: [butterflow-0.2.2.dev0-alpha.1.7z](http://srv.dthpham.me/butterflow/releases/win/butterflow-0.2.2.dev0-alpha.1.7z).
-
-### How to use it:
-1. Extract the archive to a folder.
-2. Launch cmd.exe.
-3. Change into the package directory.
-4. Run butterflow.exe with `butterflow <options> <video>`.
- * **Tip:** Add the location of the project folder to PATH to run BF from anywhere.
-
-## Install from source
-**Important:** This guide is meant for Windows 10 users.
-
+## Instructions:
 ### Set up a build environment with MSYS2:
 1. Install the 64-bit version of [msys2](https://msys2.github.io/) and set it up using their guide.
 2. Open the "Edit the system environment variables" dialog from the Control Panel and add these to the front of PATH: `PATH=C:\msys64\mingw64\local\bin;C:\msys64\mingw64\bin;C:\msys64\usr\bin`.
@@ -72,7 +59,7 @@ site.addsitedir('C:/msys64/mingw64/local/lib/python2.7/site-packages')" > C:/msy
 12. Copy `libOpenCL.dll.a` to `C:\msys64\mingw64\local\lib`.
 13. Copy the OpenCL headers to `C:\msys64\mingw64\local\include\CL`.
 
-### Compile and install Butterflow:
+### Compile and install BF:
 1. Clone the repo with `git clone https://github.com/dthpham/butterflow.git`.
 2. Change into the project directory.
 3. Build extension modules with `python setup.py build_ext -IC:\msys64\mingw64\local\include -LC:\msys64\mingw64\local\lib`.

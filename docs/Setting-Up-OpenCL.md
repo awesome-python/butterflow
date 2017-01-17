@@ -1,7 +1,7 @@
 # Setting Up OpenCL
 **Tip:** Most of this guide is adapted from other sources and should not be considered definitive or up to date. For additional information on how to satisfy the OpenCL requirement, please read [How to set up OpenCL in Linux](http://wiki.tiker.net/OpenCLHowTo).
 
-## Instructions
+## Instructions:
 ### OS X (Mavericks and newer):
 Apple provides support for OpenCL by default on all Macs so you will be able to take advantage of hardware acceleration without having to set anything up.
 
@@ -42,7 +42,7 @@ If you encounter an error that you suspect is related to OpenCL, it may be becau
 
 Typically, you just need to install at least one vendor-specific OpenCL implementation that supports your hardware under Arch. For NVIDIA install [opencl-nvidia](https://www.archlinux.org/packages/extra/x86_64/opencl-nvidia/) or [intel-opencl-runtime](https://aur.archlinux.org/packages/intel-opencl-runtime/) if you're using an Intel device.
 
-## Device compatibility
-**Important:** You need to have a `FULL_PROFILE` device that supports OpenCL 1.2 or higher to do hardware accelerated rendering with Butterflow. You can print your device info with `butterflow -d` or by using a more comprehensive tool like [clinfo](https://github.com/Oblomov/clinfo).
+## Device compatibility:
+**Important:** You need to have a `FULL_PROFILE` device that supports OpenCL 1.2 or higher to do hardware accelerated rendering with BF. You can print your device info with `butterflow -d` or by using a more comprehensive tool like [clinfo](https://github.com/Oblomov/clinfo).
 
-BF will automatically software-rendering if there are no compatible devices available (it will be extremely slow). To force this, use the `-sw` flag.
+BF will automatically revert to software-rendering if there are no compatible devices available (it will be extremely slow). To force this, use the `-sw` flag.
