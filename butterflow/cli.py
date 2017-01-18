@@ -192,6 +192,9 @@ def main():
         return 0
 
     av_info = avinfo.get_av_info(args.video)
+    if av_info['frames'] == 0:
+        print('file with 0 frames')
+        return 1
 
     use_sw_interpolate = args.sw or not ocl.compat_ocl_device_available()
     if use_sw_interpolate:
