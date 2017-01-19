@@ -295,10 +295,10 @@ def main():
                  out_sz))
         txt = 'frames: {} real, +{} interpolated, +{} dupe, -{} drop'
         if not settings['quiet']:
-            print(txt.format(rnd.source_frs,
-                             rnd.frs_interpolated,
-                             rnd.frs_duped,
-                             rnd.frs_dropped))
+            log.info(txt.format(rnd.source_frs,
+                                rnd.frs_interpolated,
+                                rnd.frs_duped,
+                                rnd.frs_dropped))
         log.info('butterflow took {:.3g} mins, done.'.format(total_time / 60))
         return 0
     else:

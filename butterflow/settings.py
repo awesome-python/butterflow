@@ -12,7 +12,7 @@ default = {
     # levels in order of urgency: critical, error, warning, info, debug
     'loglevel_0':     logging.WARNING,
     # loglevel will be set to INFO if verbose count is x
-    'loglevel_1':     logging.INFO,
+    'loglevel_1':     logging.DEBUG,
     'loglevel_2':     logging.DEBUG,
     'verbose':        False,
     'quiet':          False,

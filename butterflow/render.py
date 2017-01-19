@@ -102,7 +102,8 @@ class Renderer(object):
     def update_progress(self, progress):
         if settings['quiet']:
             return
-        sys.stdout.write('\rrendering: {}%'.format(int(progress*100)))
+        progress = min(progress, 1)
+        sys.stdout.write('\rRendering: {}%'.format(int(progress*100)))
         sys.stdout.flush()
 
     def scale_fr(self, fr):
@@ -351,7 +352,8 @@ class Renderer(object):
         def update_progress():
             if settings['quiet']:
                 return
-            sys.stdout.write('\rmux: {}%'.format(int(progress*100)))
+            progress = min(progress, 1)
+            sys.stdout.write('\rMux: {}%'.format(int(progress*100)))
             if progress >= 1:
                 sys.stdout.write('\n')
             sys.stdout.flush()

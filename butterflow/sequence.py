@@ -69,11 +69,11 @@ class VideoSequence(object):
                 break
 
     def __str__(self):
-        s = 'sequence: t={}, f={}\n'.format(
+        s = 'sequence: duration={}, frames={}\n'.format(
             str(datetime.timedelta(seconds=self.duration/1000.0)),
             self.frames)
         for i, sub in enumerate(self.subregions):
-            s += '  {} {}'.format('{0:02d}'.format(i), sub)
+            s += '{}: {}'.format('{0:02d}'.format(i), sub)
             if i < len(self.subregions)-1:
                 s += '\n'
         return s
@@ -121,7 +121,7 @@ class Subregion(object):
             return False
 
     def __str__(self):
-        s = 'sub: t={}-{} f={}-{} tgt={},{},{}'.format(
+        s = 't={}-{} f={},{} tgt={},{},{}'.format(
             str(datetime.timedelta(seconds=self.ta/1000.0)),
             str(datetime.timedelta(seconds=self.tb/1000.0)),
             self.fa,
